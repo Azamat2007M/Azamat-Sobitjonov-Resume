@@ -16,11 +16,11 @@ export default async function Home({
   const dict = await getDictionary(lang);
 
   return (
-    <main className="relative min-h-screen bg-slate-50 text-slate-900">
+    <main className="relative min-h-screen bg-slate-50 text-slate-900 flex flex-col justify-between">
       <BackgroundCanvas />
       <Navbar dict={dict.nav} lang={lang} />
 
-      <div>
+      <div className="flex-1 space-y-16 sm:space-y-24">
         <section id="hero" className="min-h-screen flex flex-col justify-center">
           <Hero dict={dict.hero} />
         </section>
@@ -36,11 +36,11 @@ export default async function Home({
         <section id="projects" className="min-h-screen flex flex-col justify-center">
           <Projects dict={dict.projects} />
         </section>
-
-        <section id="contact" className="min-h-screen flex flex-col justify-between">
-          <Footer dict={dict.footer} />
-        </section>
       </div>
+
+      <section id="contact" className="w-full">
+        <Footer dict={dict.footer} />
+      </section>
     </main>
   );
 }
