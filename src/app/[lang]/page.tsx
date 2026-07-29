@@ -20,24 +20,24 @@ export default async function Home({
       <BackgroundCanvas />
       <Navbar dict={dict.nav} lang={lang} />
 
-      <div className="space-y-16 sm:space-y-24">
-        <section id="hero">
+      <div>
+        <section id="hero" className="min-h-screen flex flex-col justify-center">
           <Hero dict={dict.hero} />
         </section>
 
-        <section id="skills">
+        <section id="skills" className="min-h-screen flex flex-col justify-center">
           <Skills dict={dict.skills} />
         </section>
 
-        <section id="education">
+        <section id="education" className="min-h-screen flex flex-col justify-center">
           <EducationTimeline dict={dict.education} />
         </section>
 
-        <section id="projects">
+        <section id="projects" className="min-h-screen flex flex-col justify-center">
           <Projects dict={dict.projects} />
         </section>
 
-        <section id="contact">
+        <section id="contact" className="min-h-screen flex flex-col justify-between">
           <Footer dict={dict.footer} />
         </section>
       </div>
