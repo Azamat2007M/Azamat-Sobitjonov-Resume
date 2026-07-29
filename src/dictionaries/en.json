@@ -1,0 +1,97 @@
+{
+  "nav": {
+    "about": "About",
+    "projects": "Projects",
+    "education": "Education",
+    "skills": "Skills",
+    "contact": "Contact",
+    "cta": "Download CV"
+  },
+  "hero": {
+    "greeting": "Hi! I am a",
+    "developer": "Developer",
+    "roles": ["Backend", "Frontend", "Fullstack"],
+    "description": "I create high-quality web applications with intuitive interfaces, reliable backend, and clean architecture. I turn complex ideas into simple and convenient services."
+  },
+  "skills": {
+    "sectionTitle": "Skills & Tech Stack",
+    "frontend": {
+      "title": "Frontend Development",
+      "desc": "Building fast, dynamic, and responsive interfaces with React, Next.js, and Tailwind CSS focused on great UX."
+    },
+    "backend": {
+      "title": "Backend Engineering",
+      "desc": "Designing high-performance REST APIs, microservices, and reliable server architecture with Python, FastAPI, and Node.js."
+    },
+    "devops": {
+      "title": "Architecture & DevOps",
+      "desc": "Containerizing applications with Docker, managing relational databases, and implementing clean code principles."
+    },
+    "leetcode": {
+      "title": "Problem Solving & Algorithms",
+      "desc": "Constantly training algorithmic thinking and data structures on LeetCode using Python."
+    }
+  },
+  "education": {
+    "title": "Education & Experience",
+    "subtitle": "My academic background, training, and practical work",
+    "present": "Present",
+    "years11": "11 Years",
+    "years2": "2 Years",
+    "months6": "6 Months",
+    "location": "Tashkent, Uzbekistan",
+    "school": {
+        "title": "Secondary Education",
+        "institution": "№110-IDUM",
+        "description": "Graduated 11 years with an in-depth study of specialized subjects. Developed a strong background in exact sciences, logic, and technical English during these years.",
+        "tags": ["STEM", "Russian", "English", "Core Sciences"]
+    },
+    "itAcademyStudy": {
+        "title": "Full-Stack Software Development",
+        "institution": "IT Academy (IT Park)",
+        "description": "Completed a 2-year intensive program: 1 year focused on modern Front-end development and 1 year specialized in Back-end architecture and databases.",
+        "tags": ["Front-end (1 Year)", "Back-end (1 Year)", "Full-Stack"]
+    },
+    "itAcademyWork": {
+        "title": "Backend Developer (Team Project)",
+        "institution": "IT Academy Practice",
+        "description": "Worked for 6 months in a team project developing an LMS platform and an integrated Telegram bot, building the architecture and backend on Nest.js.",
+        "tags": ["Nest.js", "Node.js", "LMS Development", "Telegram Bot API", "Teamwork"]
+    },
+    "university": {
+        "title": "Software Engineering",
+        "institution": "Turin Polytechnic University in Tashkent",
+        "description": "Currently pursuing a bachelor degree in Software Engineering, studying core algorithms, software design, and system engineering principles.",
+        "tags": ["Software Engineering", "Computer Science", "Algorithms"]
+    }
+  },
+  "projects": {
+    "title": "My Key Projects",
+    "subtitle": "High-performance applications built with modern web technologies",
+    "viewDemo": "Live Demo",
+    "viewCode": "GitHub",
+    "binomo": {
+        "title": "Binomo Trading Platform",
+        "subtitle": "FinTech / Real-time Trading",
+        "description": "Trading platform designed for real-time asset analysis, charting, and transaction handling. Built with WebSocket connections for fast live-data updates.",
+        "tags": ["React", "Vite.js", "Redux(RTK)", "SCSS", "Node.js", "TradingView", "Financial Charts"]
+    },
+    "thender": {
+        "title": "Thender Social Media Platform",
+        "subtitle": "Full-Stack Social Network",
+        "description": "A feature-rich social platform supporting real-time messaging, user profiles, post thends, and interactive media sharing.",
+        "tags": ["Next.js", "TypeScript", "FastApi", "WebSockets", "PostgreSQL", "Tailwind CSS"]
+    }
+  },
+  "footer": {
+    "rights": "All rights reserved.",
+    "quickLinks": "Quick Links",
+    "connect": "Connect",
+    "nav": {
+        "hero": "About Me",
+        "skills": "Skills",
+        "education": "Education",
+        "projects": "Projects"
+    }
+  }
+}
