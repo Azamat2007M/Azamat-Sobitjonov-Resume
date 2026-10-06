@@ -1,3 +1,5 @@
+'use client';
+
 import Image from "next/image";
 
 interface CardDict {
@@ -12,8 +14,11 @@ export interface ProjectsDict {
   subtitle: string;
   viewDemo: string;
   viewCode: string;
+  privateCode?: string;
+  privateNotice?: string;
   binomo: CardDict;
   thender: CardDict;
+  library: CardDict;
 }
 
 interface ProjectItem {
@@ -26,14 +31,30 @@ interface ProjectItem {
   imageAlt: string;
   demoUrl?: string;
   githubUrl?: string;
+  isPrivateGithub?: boolean;
   status?: {
     text: string;
-    variant: "danger" | "warning";
+    variant: "danger" | "warning" | "success";
   };
 }
 
 export default function Projects({ dict }: { dict: ProjectsDict }) {
   const projectsData: ProjectItem[] = [
+    {
+      id: "university-library",
+      title: dict.library.title,
+      subtitle: dict.library.subtitle,
+      description: dict.library.description,
+      tags: dict.library.tags,
+      imageSrc: "/images/Library.png",
+      imageAlt: dict.library.title,
+      demoUrl: "https://tiiu-university-library.vercel.app/",
+      isPrivateGithub: true,
+      status: {
+        text: "Live",
+        variant: "success",
+      },
+    },
     {
       id: "binomo-trading",
       title: dict.binomo.title,
@@ -66,6 +87,10 @@ export default function Projects({ dict }: { dict: ProjectsDict }) {
     },
   ];
 
+  const handlePrivateClick = () => {
+    alert(dict.privateNotice || "Source code is hosted in a private repository.");
+  };
+
   return (
     <section id="projects" className="py-16 bg-white text-gray-900">
       <div className="max-w-6xl mx-auto px-4 sm:px-6">
@@ -90,7 +115,9 @@ export default function Projects({ dict }: { dict: ProjectsDict }) {
                     className={`inline-flex items-center px-3 py-1 rounded-full text-xs font-bold shadow-lg border ${
                       project.status.variant === "danger"
                         ? "bg-red-600 text-white border-red-400"
-                        : "bg-amber-500 text-white border-amber-400"
+                        : project.status.variant === "warning"
+                        ? "bg-amber-500 text-white border-amber-400"
+                        : "bg-emerald-600 text-white border-emerald-400"
                     }`}
                   >
                     <span className="w-2 h-2 rounded-full bg-white mr-1.5 animate-pulse" />
@@ -161,15 +188,27 @@ export default function Projects({ dict }: { dict: ProjectsDict }) {
                           {dict.viewDemo} ↗
                         </a>
                       )}
-                      {project.githubUrl && (
-                        <a
-                          href={project.githubUrl}
-                          target="_blank"
-                          rel="noreferrer"
-                          className="px-5 py-2.5 rounded-xl bg-white border border-gray-300 text-gray-700 font-semibold text-sm hover:bg-gray-100 transition-colors"
+
+                      {project.isPrivateGithub ? (
+                        <button
+                          onClick={handlePrivateClick}
+                          className="px-5 py-2.5 rounded-xl bg-gray-200 border border-gray-300 text-gray-600 font-semibold text-sm hover:bg-gray-300 transition-colors flex items-center gap-1.5 cursor-pointer"
+                          title={dict.privateNotice}
                         >
-                          {dict.viewCode}
-                        </a>
+                          <span>🔒</span>
+                          <span>{dict.privateCode || "Private Code"}</span>
+                        </button>
+                      ) : (
+                        project.githubUrl && (
+                          <a
+                            href={project.githubUrl}
+                            target="_blank"
+                            rel="noreferrer"
+                            className="px-5 py-2.5 rounded-xl bg-white border border-gray-300 text-gray-700 font-semibold text-sm hover:bg-gray-100 transition-colors"
+                          >
+                            {dict.viewCode}
+                          </a>
+                        )
                       )}
                     </div>
                   </div>

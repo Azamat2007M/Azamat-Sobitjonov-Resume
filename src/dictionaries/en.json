@@ -81,6 +81,12 @@
         "subtitle": "Full-Stack Social Network",
         "description": "A feature-rich social platform supporting real-time messaging, user profiles, post thends, and interactive media sharing.",
         "tags": ["Next.js", "TypeScript", "FastApi", "WebSockets", "PostgreSQL", "Tailwind CSS"]
+    },
+    "library": {
+        "title": "TTPU Digital E-Library Platform",
+        "subtitle": "Full-Stack Educational Platform",
+        "description": "Comprehensive university digital library system featuring multi-language book catalog, built-in PDF viewer, hero slide banners, admin management dashboard, and Cloudflare R2 object storage.",
+        "tags": ["Next.js", "FastAPI", "Python", "PostgreSQL", "Cloudflare R2", "Tailwind CSS"]
     }
   },
   "footer": {

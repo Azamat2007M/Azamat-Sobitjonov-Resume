@@ -1,4 +1,3 @@
-import Link from "next/link";
 import { Send, Mail, Phone } from "lucide-react";
 
 export interface FooterDict {
